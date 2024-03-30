@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "overDraw",
+    "version": "3.0",
+    "description": "overDraw the screen",
+    "icons": {
+        "16": "icon.jpg",
+        "48": "icon.jpg",
+        "128": "icon.jpg"
+      },
+    
+    "content_scripts": [
+        {
+          "js": ["main.js"],
+          "matches": ["https://*/*"]
+        }
+    ]
+}
