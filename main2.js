@@ -250,12 +250,3 @@ document.getElementById("exit").onclick = () => {
     document.querySelector("html").style.overflow = "auto";
     controlPopUp = true;
 }
-
-enable.onclick = () => {
-    console.log("hehe")
-    board.style.zIndex = 99999;
-    board.style.top = '0';
-    controlPopUp = false;
-    //xoá bỏ thuộc tính có thể lăn chuột khi đang vẽ
-    document.querySelector("html").style.overflow = "hidden";
-}
