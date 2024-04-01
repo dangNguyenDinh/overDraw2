@@ -4,14 +4,17 @@
     "version": "3.0",
     "description": "overDraw the screen",
     "icons": {
-        "16": "icon.jpg",
-        "48": "icon.jpg",
-        "128": "icon.jpg"
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
       },
-    
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    },
     "content_scripts": [
         {
-          "js": ["main.js"],
+          "js": ["main2.js"],
           "matches": ["https://*/*"]
         }
     ]
