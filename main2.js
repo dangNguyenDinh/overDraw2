@@ -9,8 +9,8 @@ function addStyle() {
         background-color: brown;
         height: 25px;
         border: black 2px solid;
-        display: inline-block;
-        z-index: -999999;
+        display: none;
+        z-index: 999999;
     }
     #canvas{
         cursor: pointer;
@@ -240,6 +240,8 @@ function findPos(obj) {
 
 document.getElementById("clearBtn").onclick = clearCanvas;
 document.getElementById("black").onclick = changeColor;
+
+//thu nhỏ và phóng to
 let mini = false;
 document.getElementById("exit").onclick = ()=>{
     if(!mini){
@@ -263,7 +265,7 @@ document.getElementById("exit").onclick = ()=>{
 }
 
 function disable(){
-    colors.style.zIndex = '-999999';
+    colors.style.display = 'none';
     board.style.zIndex = '-999999';
     board.style.top = '-200vh';
     //thêm lại thuộc tính có thể lăn chuột khi hết vẽ
@@ -272,7 +274,7 @@ function disable(){
 }
 
 function enable() {
-    colors.style.zIndex = '999999';
+    colors.style.display = 'inline-block';
     board.style.zIndex = '999999';
     board.style.top = '0';
     controlPopUp = false;
